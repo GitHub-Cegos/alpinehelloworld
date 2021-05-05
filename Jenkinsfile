@@ -72,6 +72,11 @@ pipeline {
           HEROKU_API_KEY = credentials('heroku_api_key')
       }
       steps {
+        withEnv(['MYTOOL_HOME=/usr/local']) {
+    sh '$MYTOOL_HOME/bin/heroku'
+  }
+
+
           script {
             sh '''
               heroku container:login
