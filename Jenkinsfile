@@ -47,7 +47,7 @@ pipeline {
              }
           }
      }
-/*     stage('Push image on dockerhub') {
+     stage('Push image on dockerhub') {
            agent any 
            environment {
                 DOCKERHUB_LOGIN = credentials('dockerhub_lambert')
@@ -62,7 +62,7 @@ pipeline {
                    '''
                }
            }
-        }*/
+        }
      stage('Push image in staging and deploy it') {
        when {
               expression { GIT_BRANCH == 'origin/master' }
