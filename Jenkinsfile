@@ -73,7 +73,7 @@ pipeline {
       }
       steps {
        
-  withEnv(['PATH+HEROKU=/use/local/bin/']) {
+  withEnv(['PATH+HEROKU=/use/local/bin/heroku']) {
      sh 'ls'
      sh 'heroku'
 }
