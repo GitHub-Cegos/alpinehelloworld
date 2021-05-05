@@ -4,7 +4,7 @@ pipeline {
        IMAGE_TAG = "latest"
        STAGING = "lambert-staging"
        PRODUCTION = "lambert-production"
-       IMAGE_REPO = "lambert"
+       IMAGE_REPO = "dockeribuser"
      }
      agent none
      stages {
