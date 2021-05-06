@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
         stage('deploy with ansible') {
-            agent { docker { image 'registry.gitlab.com/robconnolly/docker-ansible:latest' } }
+            agent { docker { image 'dirane/docker-ansible:latest' } }
             steps {
                 script {
                     sh '''
